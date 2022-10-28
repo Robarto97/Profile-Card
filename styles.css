@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desat-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-style: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-cyan);
+  background-image: url(images/bg-pattern-top.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card {
+  max-width: 400px;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card .background {
+  background-image: url(images/bg-pattern-card.svg);
+  height: 20vh;
+  position: relative;
+}
+.card .background .img-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  border: 5px solid white;
+}
+.card .background .img-wrapper img {
+  display: block;
+  width: 100%;
+}
+
+.card .text {
+  padding: 5rem 0rem 2rem;
+}
+.card .text .top {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--dark-gray);
+
+}
+.card .text .top .line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+.card .text .name {
+  font-weight: 700;
+}
+.card .text .age {
+  color: var(--dark-gray);
+}
+.card .text .city {
+  color: var(--dark-gray);
+  font-size: 1rem;
+}
+
+.card .text .stats{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    padding-bottom: unset;
+    gap: 2.5rem;
+}
+
+.card .text .stats .stat p:first-of-type{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.card .text .stats .stat p:last-of-type{
+    color: var(--dark-gray);
+    font-size: .75rem;
+    letter-spacing: 2px;
+    margin-top: .25rem;
+}
